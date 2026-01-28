@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Extra Resources - Advanced AI</title>
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <div class="logo me-auto">
+        <a href="index.html">
+          <img src="assets/img/kaust-academy-logo.png" alt="KAUST Academy">
+        </a>
+      </div>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="day1.html">Day 1</a></li>
+          <li><a href="day2.html">Day 2</a></li>
+          <li><a href="day3.html">Day 3</a></li>
+          <li><a href="day4.html">Day 4: Exam</a></li>
+          <li><a class="active" href="extra.html">Extra</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="breadcrumbs animate-up">
+      <div class="container">
+        <h2>Extra Resources</h2>
+        <p>Additional materials and references to supplement your learning.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="footer">
+    <div class="container d-md-flex py-4">
+      <div class="me-md-auto text-center w-100">
+        <div class="copyright">
+          &copy; Copyright <strong><span>KAUST Academy</span></strong>. All Rights Reserved
+        </div>
+        <div class="license" style="font-size: 13px; margin-top: 8px; color: #555;">
+          Licensed under <a
+            href="https://github.com/KAUST-Academy/KAUST_Academy_2026_Advanced_AI?tab=GPL-3.0-1-ov-file#readme"
+            target="_blank" rel="noopener">GPL-3.0</a>.
+          Recording and uploading lectures online is not permitted.
+        </div>
+        <div class="credits" style="font-size: 14px; margin-top: 5px; color: #555;">
+          Website created by <strong>Ali Habibullah</strong> and <strong>Sattam Altwaim</strong>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script>AOS.init();</script>
+  <script>
+    AOS.init();
+
+    // Header scroll shadow
+    window.addEventListener('scroll', function () {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    /**
+     * Mobile nav toggle
+     */
+    const on = (type, el, listener, all = false) => {
+      let selectEl = document.querySelector(el);
+      if (selectEl) {
+        selectEl.addEventListener(type, listener);
+      }
+    }
+
+    on('click', '.mobile-nav-toggle', function (e) {
+      document.querySelector('#navbar').classList.toggle('navbar-mobile')
+      this.classList.toggle('bi-list')
+      this.classList.toggle('bi-x')
+    })
+  </script>
+</body>
+
+</html>
